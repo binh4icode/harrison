@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+    <div class="player">
+
+        <audio id="myAudio" preload="auto"></audio>
+        <div class="details">
+            <img class="track-art" src="images/track-art-1.png" alt="track-image" />
+            <h1 class="track-name text">Track Name</h1>
+            <h2 class="track-author text">Author</h2>
+            <h3 class="now-playing text">Playing x of y</h3>
+        </div>
+    
+
+<div class="button">
+    <img class="prev-track btn" src="previous.png" alt="previous button">
+    <img class="playpause-track btn " src="play.png" alt="play-pause button">
+    <img class="next-track btn" src="next.png" alt="next-button">
+    <a class="download-track" href="resources/audio">
+        <img class="download btn" src="download.png" alt="download-button">
+    </a>
+</div>
+
+
+<div class="slider_container">
+    <p class="current-time">00:00</p>
+    <input type="range" min="0" max="100" value="0" class="seek_slider" onchange="changeTime()"/>
+    <p class="total-duration">00:00</p>
+</div>
+
+<div class="slider_container">
+    <img class="no-volume btn" src="no-volume.png" alt="no-volume-button" />
+    <input type="range" min="0" max="100" value="50" class="volume_slider" onchange="changeVolume()" />
+    <img class="max-volume btn" src="max-volume.png" alt="max-volume-button" />
+</div>
+
+    </div>
+
+
+            <script src="script.js"></script>
+
+</body>
+</html>
